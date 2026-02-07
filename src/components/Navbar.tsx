@@ -39,9 +39,15 @@ const Navbar = () => {
             ))}
             <a
               href="#story"
-              className="px-6 py-2 bg-primary text-primary-foreground font-oswald text-sm tracking-wider uppercase hover:bg-gold-light transition-colors"
+              className="px-6 py-2 border border-primary text-primary font-oswald text-sm tracking-wider uppercase hover:bg-primary hover:text-primary-foreground transition-colors"
             >
               Start Your Journey
+            </a>
+            <a
+              href="#training"
+              className="px-6 py-2 bg-primary text-primary-foreground font-oswald text-sm tracking-wider uppercase hover:bg-gold-light transition-colors"
+            >
+              Join Training
             </a>
           </div>
 
@@ -75,9 +81,16 @@ const Navbar = () => {
           <a
             href="#story"
             onClick={() => setIsOpen(false)}
-            className="block w-full text-center px-6 py-3 bg-primary text-primary-foreground font-oswald tracking-wider uppercase"
+            className="block w-full text-center px-6 py-3 border border-primary text-primary font-oswald tracking-wider uppercase"
           >
             Start Your Journey
+          </a>
+          <a
+            href="#training"
+            onClick={() => setIsOpen(false)}
+            className="block w-full text-center px-6 py-3 bg-primary text-primary-foreground font-oswald tracking-wider uppercase"
+          >
+            Join Training
           </a>
         </div>
       </motion.div>
