@@ -1,11 +1,27 @@
 import { motion } from "framer-motion";
 import trainerHero from "@/assets/trainer-hero.png";
+import introVideo from "@/assets/intro-video.mp4";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-radial">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={introVideo} type="video/mp4" />
+        </video>
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+
       {/* Floating background words */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-[1]">
         <span className="floating-word top-[10%] left-[-5%] animate-slide-right text-primary/5">
           DISCIPLINE
         </span>
@@ -18,8 +34,8 @@ const HeroSection = () => {
       </div>
 
       {/* Red accent lines */}
-      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-accent to-transparent opacity-50" />
-      <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-primary to-transparent opacity-50" />
+      <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-accent to-transparent opacity-50 z-[1]" />
+      <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-primary to-transparent opacity-50 z-[1]" />
 
       <div className="container-custom relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 px-4">
         {/* Text Content */}
